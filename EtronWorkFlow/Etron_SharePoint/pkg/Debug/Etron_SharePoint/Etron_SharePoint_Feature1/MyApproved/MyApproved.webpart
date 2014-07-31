@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Etron_SharePoint.WebParts.MyApproved.MyApproved, Etron_SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=94fea3e72648fba3" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">MyApproved</property>
+        <property name="Description" type="string">我审批过的单子</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

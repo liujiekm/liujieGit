@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etron_SharePoint", "Etron_SharePoint\Etron_SharePoint.csproj", "{DF7B428E-7066-4368-A623-A68DF3F65F89}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4257E420-97B3-44FB-86EC-D5F68FC1A11E} = {4257E420-97B3-44FB-86EC-D5F68FC1A11E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etron_DAL", "Etron_DAL\Etron_DAL.csproj", "{2DBAA01F-17EF-4CA3-B7B5-FA43B81DC814}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etron_Utility", "Etron_Utility\Etron_Utility.csproj", "{3B0DCD1C-C355-484B-9073-89CDF25BDA05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etron_Model", "Etron_Model\Etron_Model.csproj", "{4257E420-97B3-44FB-86EC-D5F68FC1A11E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etron_BLL", "Etron_BLL\Etron_BLL.csproj", "{BBEB7CA2-7166-4681-8ED1-FBF7100E9C5F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://liuj.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Etron_BLL\\Etron_BLL.csproj
+		SccProjectName1 = Etron_BLL
+		SccLocalPath1 = Etron_BLL
+		SccProjectUniqueName2 = Etron_DAL\\Etron_DAL.csproj
+		SccProjectName2 = Etron_DAL
+		SccLocalPath2 = Etron_DAL
+		SccProjectUniqueName3 = Etron_Model\\Etron_Model.csproj
+		SccProjectName3 = Etron_Model
+		SccLocalPath3 = Etron_Model
+		SccProjectUniqueName4 = Etron_SharePoint\\Etron_SharePoint.csproj
+		SccProjectName4 = Etron_SharePoint
+		SccLocalPath4 = Etron_SharePoint
+		SccProjectUniqueName5 = Etron_Utility\\Etron_Utility.csproj
+		SccProjectName5 = Etron_Utility
+		SccLocalPath5 = Etron_Utility
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF7B428E-7066-4368-A623-A68DF3F65F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF7B428E-7066-4368-A623-A68DF3F65F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF7B428E-7066-4368-A623-A68DF3F65F89}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DF7B428E-7066-4368-A623-A68DF3F65F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF7B428E-7066-4368-A623-A68DF3F65F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF7B428E-7066-4368-A623-A68DF3F65F89}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2DBAA01F-17EF-4CA3-B7B5-FA43B81DC814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBAA01F-17EF-4CA3-B7B5-FA43B81DC814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBAA01F-17EF-4CA3-B7B5-FA43B81DC814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBAA01F-17EF-4CA3-B7B5-FA43B81DC814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B0DCD1C-C355-484B-9073-89CDF25BDA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0DCD1C-C355-484B-9073-89CDF25BDA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0DCD1C-C355-484B-9073-89CDF25BDA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0DCD1C-C355-484B-9073-89CDF25BDA05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4257E420-97B3-44FB-86EC-D5F68FC1A11E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4257E420-97B3-44FB-86EC-D5F68FC1A11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4257E420-97B3-44FB-86EC-D5F68FC1A11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4257E420-97B3-44FB-86EC-D5F68FC1A11E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEB7CA2-7166-4681-8ED1-FBF7100E9C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEB7CA2-7166-4681-8ED1-FBF7100E9C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEB7CA2-7166-4681-8ED1-FBF7100E9C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEB7CA2-7166-4681-8ED1-FBF7100E9C5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

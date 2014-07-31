@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8662d611174a46339b59889c9b2ba555" Name="关系图1">
+        <EntityTypeShape EntityType="EtronHRModel.hr001" PointX="0.75" PointY="0.75" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtronHRModel.hr003" Width="1.5" PointX="2.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtronHRModel.hr005" Width="1.5" PointX="5.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtronHRModel.hr005a" Width="1.5" PointX="4" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtronHRModel.hr006" Width="1.5" PointX="7.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtronHRModel.hr003a" Width="1.5" PointX="7.75" PointY="5.875" />
+        <EntityTypeShape EntityType="EtronHRModel.hr003cft" Width="1.5" PointX="9.5" PointY="5.5" />
+        <EntityTypeShape EntityType="EtronHRModel.hr010CFT" Width="1.5" PointX="11.064599839534889" PointY="19.245136776587525" />
+        <EntityTypeShape EntityType="EtronHRModel.hr006cft" Width="1.5" PointX="3.0288174986042167" PointY="6.5640267015267284" />
+        <EntityTypeShape EntityType="EtronHRModel.tblNoticeBoard" Width="1.5" PointX="4.0845331121629727" PointY="10.297051956084115" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

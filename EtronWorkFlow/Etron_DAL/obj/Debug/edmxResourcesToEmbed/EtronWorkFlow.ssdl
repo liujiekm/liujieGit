@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EtronWFModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="EtronWFModelStoreContainer">
+    <EntitySet Name="WF_Delegate" EntityType="EtronWFModel.Store.WF_Delegate" store:Type="Tables" store:Schema="dbo" store:Name="WF_Delegate">
+      <DefiningQuery>SELECT 
+      [WF_Delegate].[ID] AS [ID], 
+      [WF_Delegate].[TypeID] AS [TypeID], 
+      [WF_Delegate].[UserAccount] AS [UserAccount], 
+      [WF_Delegate].[DelegateUserAccount] AS [DelegateUserAccount], 
+      [WF_Delegate].[BeginTime] AS [BeginTime], 
+      [WF_Delegate].[EndTime] AS [EndTime], 
+      [WF_Delegate].[Enable] AS [Enable]
+      FROM [dbo].[WF_Delegate] AS [WF_Delegate]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WF_Record" EntityType="EtronWFModel.Store.WF_Record" store:Type="Tables" store:Schema="dbo" store:Name="WF_Record">
+      <DefiningQuery>SELECT 
+      [WF_Record].[ID] AS [ID], 
+      [WF_Record].[TaskID] AS [TaskID], 
+      [WF_Record].[State] AS [State], 
+      [WF_Record].[ApproverAccount] AS [ApproverAccount], 
+      [WF_Record].[ApproverDisplayName] AS [ApproverDisplayName], 
+      [WF_Record].[ApproveDate] AS [ApproveDate], 
+      [WF_Record].[ApproverResult] AS [ApproverResult], 
+      [WF_Record].[Remark1] AS [Remark1], 
+      [WF_Record].[Remark2] AS [Remark2]
+      FROM [dbo].[WF_Record] AS [WF_Record]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WF_Task" EntityType="EtronWFModel.Store.WF_Task" store:Type="Tables" store:Schema="dbo" store:Name="WF_Task">
+      <DefiningQuery>SELECT 
+      [WF_Task].[ID] AS [ID], 
+      [WF_Task].[ParentID] AS [ParentID], 
+      [WF_Task].[TypeID] AS [TypeID], 
+      [WF_Task].[FormUrl] AS [FormUrl], 
+      [WF_Task].[FormCode] AS [FormCode], 
+      [WF_Task].[ApprovalType] AS [ApprovalType], 
+      [WF_Task].[CreaterAccount] AS [CreaterAccount], 
+      [WF_Task].[CreaterDisplayName] AS [CreaterDisplayName], 
+      [WF_Task].[CreateTime] AS [CreateTime], 
+      [WF_Task].[State] AS [State], 
+      [WF_Task].[NextInquisitorAccount] AS [NextInquisitorAccount], 
+      [WF_Task].[NextInquisitorDisplayName] AS [NextInquisitorDisplayName], 
+      [WF_Task].[ProcessTime] AS [ProcessTime], 
+      [WF_Task].[LastInquisitorAccount] AS [LastInquisitorAccount], 
+      [WF_Task].[LastInquisitorDisplayName] AS [LastInquisitorDisplayName], 
+      [WF_Task].[LastProcessTime] AS [LastProcessTime], 
+      [WF_Task].[LastState] AS [LastState], 
+      [WF_Task].[Remark1] AS [Remark1], 
+      [WF_Task].[Remark2] AS [Remark2]
+      FROM [dbo].[WF_Task] AS [WF_Task]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WF_Type" EntityType="EtronWFModel.Store.WF_Type" store:Type="Tables" store:Schema="dbo" store:Name="WF_Type">
+      <DefiningQuery>SELECT 
+      [WF_Type].[ID] AS [ID], 
+      [WF_Type].[TypeName] AS [TypeName], 
+      [WF_Type].[Description] AS [Description], 
+      [WF_Type].[LockFlag] AS [LockFlag], 
+      [WF_Type].[Remark1] AS [Remark1], 
+      [WF_Type].[Remark2] AS [Remark2]
+      FROM [dbo].[WF_Type] AS [WF_Type]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“EtronWF.dbo.WF_Delegate”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="WF_Delegate">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TypeID" />
+      <PropertyRef Name="UserAccount" />
+      <PropertyRef Name="DelegateUserAccount" />
+      <PropertyRef Name="BeginTime" />
+      <PropertyRef Name="EndTime" />
+      <PropertyRef Name="Enable" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserAccount" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DelegateUserAccount" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BeginTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“EtronWF.dbo.WF_Record”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="WF_Record">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TaskID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TaskID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="State" Type="nvarchar" MaxLength="500" />
+    <Property Name="ApproverAccount" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApproverDisplayName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApproveDate" Type="datetime" />
+    <Property Name="ApproverResult" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remark1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remark2" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“EtronWF.dbo.WF_Task”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="WF_Task">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TypeID" />
+      <PropertyRef Name="FormUrl" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentID" Type="uniqueidentifier" />
+    <Property Name="TypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FormUrl" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="FormCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="ApprovalType" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterAccount" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreaterDisplayName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="State" Type="nvarchar" MaxLength="500" />
+    <Property Name="NextInquisitorAccount" Type="nvarchar" MaxLength="50" />
+    <Property Name="NextInquisitorDisplayName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProcessTime" Type="datetime" />
+    <Property Name="LastInquisitorAccount" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastInquisitorDisplayName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastProcessTime" Type="datetime" />
+    <Property Name="LastState" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remark1" Type="nvarchar" MaxLength="500" />
+    <Property Name="Remark2" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“EtronWF.dbo.WF_Type”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="WF_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TypeName" />
+      <PropertyRef Name="LockFlag" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="LockFlag" Type="bit" Nullable="false" />
+    <Property Name="Remark1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Remark2" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="acdea445-b618-4a66-96e4-9f1170dcad86" Scope="Site" Title="Etron_SharePoint Feature1">
+  <ElementManifests>
+    <ElementManifest Location="MyTask\Elements.xml" />
+    <ElementFile Location="MyTask\MyTask.webpart" />
+    <ElementManifest Location="MyApply\Elements.xml" />
+    <ElementFile Location="MyApply\MyApply.webpart" />
+    <ElementManifest Location="MyApproved\Elements.xml" />
+    <ElementFile Location="MyApproved\MyApproved.webpart" />
+    <ElementManifest Location="DelegateConfiguration\Elements.xml" />
+    <ElementFile Location="DelegateConfiguration\DelegateConfiguration.webpart" />
+  </ElementManifests>
+</Feature>

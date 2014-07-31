@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <TokenReplacementFileExtensions>ashx;svc</TokenReplacementFileExtensions>
+    <ProjectGuid>{DF7B428E-7066-4368-A623-A68DF3F65F89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Etron_SharePoint</RootNamespace>
+    <AssemblyName>Etron_SharePoint</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.SharePoint.Client.ServerRuntime\14.0.0.0__71e9bce111e9429c\Microsoft.SharePoint.Client.ServerRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROLTEMPLATES\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISAPI\UserBirthdayService\IUserBirthday.cs" />
+    <Compile Include="ISAPI\UserBirthdayService\UserBirthday.cs" />
+    <Compile Include="Layouts\Etron_SharePoint\ContractRetrive.cs" />
+    <Compile Include="Layouts\Etron_SharePoint\EtronContract.aspx.cs">
+      <DependentUpon>EtronContract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Etron_SharePoint\EtronContract.aspx.designer.cs">
+      <DependentUpon>EtronContract.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebParts\DelegateConfiguration\DelegateConfiguration.ascx.cs">
+      <DependentUpon>DelegateConfiguration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\DelegateConfiguration\DelegateConfiguration.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DelegateConfiguration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\MyApply\MyApply.ascx.cs">
+      <DependentUpon>MyApply.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\MyApply\MyApply.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyApply.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\MyApproved\MyApproved.ascx.cs">
+      <DependentUpon>MyApproved.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\MyApproved\MyApproved.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyApproved.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\MyTask\MyTask.ascx.cs">
+      <DependentUpon>MyTask.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\MyTask\MyTask.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyTask.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{705955fe-9856-4d5a-b84b-d30f7d39df1b}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{6060e4b3-c3c5-4966-a21e-edb849408b93}</FeatureId>
+    </None>
+    <None Include="ISAPI\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{299b0e83-8fd7-426d-b91d-35f5144c2d27}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <Content Include="ISAPI\UserBirthdayService\UserBirthday.svc" />
+    <Content Include="Layouts\Etron_SharePoint\ContractRetrive.ashx" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{25fa84f1-bb54-491a-bfbb-095d251f3a15}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{21436620-2dd5-4e23-b51a-e4f1e1b20dba}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\DelegateConfiguration\DelegateConfiguration.webpart" />
+    <None Include="WebParts\DelegateConfiguration\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{594af85d-96cf-4cb3-a4a8-a23b9e43f523}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\MyApply\MyApply.webpart" />
+    <None Include="WebParts\MyApply\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f45d0ce0-a82d-4417-bf7a-698918f0e3e4}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\MyApproved\MyApproved.webpart" />
+    <None Include="WebParts\MyApproved\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{523249d2-38aa-428b-adb1-612b4c374ed3}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\MyTask\MyTask.webpart" />
+    <None Include="WebParts\MyTask\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fbfa2dfb-8764-4d7b-9677-c1cc4529afce}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Etron_BLL\Etron_BLL.csproj">
+      <Project>{bbeb7ca2-7166-4681-8ed1-fbf7100e9c5f}</Project>
+      <Name>Etron_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Etron_Model\Etron_Model.csproj">
+      <Project>{4257e420-97b3-44fb-86ec-d5f68fc1a11e}</Project>
+      <Name>Etron_Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Etron_Utility\Etron_Utility.csproj">
+      <Project>{3b0dcd1c-c355-484b-9073-89cdf25bda05}</Project>
+      <Name>Etron_Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CONTROLTEMPLATES\Pager.ascx" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\Etron_SharePoint\css\bootstrap.css" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\1_close.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\1_open.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\2.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\3.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\4.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\5.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\6.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\7.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\8.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\diy\9.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\line_conn.gif" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\loading.gif" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\zTreeStandard.gif" />
+    <Content Include="Layouts\Etron_SharePoint\css\img\zTreeStandard.png" />
+    <Content Include="Layouts\Etron_SharePoint\css\pagination.css" />
+    <Content Include="Layouts\Etron_SharePoint\css\zTreeStyle.css" />
+    <Content Include="Layouts\Etron_SharePoint\EtronContract.aspx" />
+    <Content Include="Layouts\Etron_SharePoint\HTMLPage1.html" />
+    <Content Include="Layouts\Etron_SharePoint\image\new3.gif" />
+    <Content Include="Layouts\Etron_SharePoint\image\node.png" />
+    <Content Include="Layouts\Etron_SharePoint\image\person.gif" />
+    <Content Include="Layouts\Etron_SharePoint\js\bootstrap.js" />
+    <Content Include="Layouts\Etron_SharePoint\js\jquery.js" />
+    <Content Include="Layouts\Etron_SharePoint\js\jquery.pagination.js" />
+    <Content Include="Layouts\Etron_SharePoint\js\jquery.ztree.all-3.5.min.js" />
+    <Content Include="WebParts\DelegateConfiguration\DelegateConfiguration.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>DelegateConfiguration.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\DelegateConfiguration\Elements.xml" />
+    <Content Include="WebParts\MyApply\Elements.xml" />
+    <Content Include="WebParts\MyApply\MyApply.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>MyApply.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\MyApproved\Elements.xml" />
+    <Content Include="WebParts\MyApproved\MyApproved.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>MyApproved.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\MyTask\Elements.xml" />
+    <Content Include="WebParts\MyTask\MyTask.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>MyTask.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

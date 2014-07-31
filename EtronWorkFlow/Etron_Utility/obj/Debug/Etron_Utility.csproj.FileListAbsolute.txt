@@ -1,0 +1,5 @@
+E:\SuzhouEtron\EtronWorkFlow\Etron_Utility\bin\Debug\Etron_Utility.dll
+E:\SuzhouEtron\EtronWorkFlow\Etron_Utility\bin\Debug\Etron_Utility.pdb
+E:\SuzhouEtron\EtronWorkFlow\Etron_Utility\obj\Debug\Etron_Utility.csprojResolveAssemblyReference.cache
+E:\SuzhouEtron\EtronWorkFlow\Etron_Utility\obj\Debug\Etron_Utility.dll
+E:\SuzhouEtron\EtronWorkFlow\Etron_Utility\obj\Debug\Etron_Utility.pdb

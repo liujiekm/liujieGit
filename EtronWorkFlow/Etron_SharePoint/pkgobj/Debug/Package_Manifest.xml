@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="21436620-2dd5-4e23-b51a-e4f1e1b20dba" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="Etron_BLL.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Etron_BLL" Namespace="Etron_BLL" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+    <Assembly Location="Etron_DAL.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Etron_DAL" Namespace="Etron_DAL" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+    <Assembly Location="Etron_Model.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Etron_Model" Namespace="Etron_Model" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+    <Assembly Location="Etron_Utility.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Etron_Utility" Namespace="Etron_Utility" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+    <Assembly Location="Etron_SharePoint.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Etron_SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=94fea3e72648fba3" Namespace="Etron_SharePoint.WebParts.MyTask" TypeName="*" />
+        <SafeControl Assembly="Etron_SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=94fea3e72648fba3" Namespace="Etron_SharePoint.WebParts.MyApply" TypeName="*" />
+        <SafeControl Assembly="Etron_SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=94fea3e72648fba3" Namespace="Etron_SharePoint.WebParts.MyApproved" TypeName="*" />
+        <SafeControl Assembly="Etron_SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=94fea3e72648fba3" Namespace="Etron_SharePoint.WebParts.DelegateConfiguration" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <RootFiles>
+    <RootFile Location="ISAPI\UserBirthdayService\UserBirthday.svc" />
+  </RootFiles>
+  <TemplateFiles>
+    <TemplateFile Location="Layouts\Etron_SharePoint\ContractRetrive.ashx" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\bootstrap.css" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\1_close.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\1_open.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\2.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\3.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\4.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\5.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\6.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\7.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\8.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\diy\9.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\line_conn.gif" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\loading.gif" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\zTreeStandard.gif" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\img\zTreeStandard.png" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\pagination.css" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\css\zTreeStyle.css" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\EtronContract.aspx" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\HTMLPage1.html" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\image\new3.gif" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\image\person.gif" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\js\bootstrap.js" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\js\jquery.js" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\js\jquery.pagination.js" />
+    <TemplateFile Location="Layouts\Etron_SharePoint\js\jquery.ztree.all-3.5.min.js" />
+    <TemplateFile Location="CONTROLTEMPLATES\Pager.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="Etron_SharePoint_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

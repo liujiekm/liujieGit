@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EtronWFModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="EtronWFModelStoreContainer">
+          <EntitySet Name="WF_Delegate" EntityType="EtronWFModel.Store.WF_Delegate" store:Type="Tables" store:Schema="dbo" store:Name="WF_Delegate">
+            <DefiningQuery>SELECT 
+      [WF_Delegate].[ID] AS [ID], 
+      [WF_Delegate].[TypeID] AS [TypeID], 
+      [WF_Delegate].[UserAccount] AS [UserAccount], 
+      [WF_Delegate].[DelegateUserAccount] AS [DelegateUserAccount], 
+      [WF_Delegate].[BeginTime] AS [BeginTime], 
+      [WF_Delegate].[EndTime] AS [EndTime], 
+      [WF_Delegate].[Enable] AS [Enable]
+      FROM [dbo].[WF_Delegate] AS [WF_Delegate]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WF_Record" EntityType="EtronWFModel.Store.WF_Record" store:Type="Tables" store:Schema="dbo" store:Name="WF_Record">
+            <DefiningQuery>SELECT 
+      [WF_Record].[ID] AS [ID], 
+      [WF_Record].[TaskID] AS [TaskID], 
+      [WF_Record].[State] AS [State], 
+      [WF_Record].[ApproverAccount] AS [ApproverAccount], 
+      [WF_Record].[ApproverDisplayName] AS [ApproverDisplayName], 
+      [WF_Record].[ApproveDate] AS [ApproveDate], 
+      [WF_Record].[ApproverResult] AS [ApproverResult], 
+      [WF_Record].[Remark1] AS [Remark1], 
+      [WF_Record].[Remark2] AS [Remark2]
+      FROM [dbo].[WF_Record] AS [WF_Record]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WF_Task" EntityType="EtronWFModel.Store.WF_Task" store:Type="Tables" store:Schema="dbo" store:Name="WF_Task">
+            <DefiningQuery>SELECT 
+      [WF_Task].[ID] AS [ID], 
+      [WF_Task].[ParentID] AS [ParentID], 
+      [WF_Task].[TypeID] AS [TypeID], 
+      [WF_Task].[FormUrl] AS [FormUrl], 
+      [WF_Task].[FormCode] AS [FormCode], 
+      [WF_Task].[ApprovalType] AS [ApprovalType], 
+      [WF_Task].[CreaterAccount] AS [CreaterAccount], 
+      [WF_Task].[CreaterDisplayName] AS [CreaterDisplayName], 
+      [WF_Task].[CreateTime] AS [CreateTime], 
+      [WF_Task].[State] AS [State], 
+      [WF_Task].[NextInquisitorAccount] AS [NextInquisitorAccount], 
+      [WF_Task].[NextInquisitorDisplayName] AS [NextInquisitorDisplayName], 
+      [WF_Task].[ProcessTime] AS [ProcessTime], 
+      [WF_Task].[LastInquisitorAccount] AS [LastInquisitorAccount], 
+      [WF_Task].[LastInquisitorDisplayName] AS [LastInquisitorDisplayName], 
+      [WF_Task].[LastProcessTime] AS [LastProcessTime], 
+      [WF_Task].[LastState] AS [LastState], 
+      [WF_Task].[Remark1] AS [Remark1], 
+      [WF_Task].[Remark2] AS [Remark2]
+      FROM [dbo].[WF_Task] AS [WF_Task]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WF_Type" EntityType="EtronWFModel.Store.WF_Type" store:Type="Tables" store:Schema="dbo" store:Name="WF_Type">
+            <DefiningQuery>SELECT 
+      [WF_Type].[ID] AS [ID], 
+      [WF_Type].[TypeName] AS [TypeName], 
+      [WF_Type].[Description] AS [Description], 
+      [WF_Type].[LockFlag] AS [LockFlag], 
+      [WF_Type].[Remark1] AS [Remark1], 
+      [WF_Type].[Remark2] AS [Remark2]
+      FROM [dbo].[WF_Type] AS [WF_Type]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“EtronWF.dbo.WF_Delegate”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="WF_Delegate">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TypeID" />
+            <PropertyRef Name="UserAccount" />
+            <PropertyRef Name="DelegateUserAccount" />
+            <PropertyRef Name="BeginTime" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="Enable" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TypeID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserAccount" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DelegateUserAccount" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="BeginTime" Type="datetime" Nullable="false" />
+          <Property Name="EndTime" Type="datetime" Nullable="false" />
+          <Property Name="Enable" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“EtronWF.dbo.WF_Record”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="WF_Record">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TaskID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="500" />
+          <Property Name="ApproverAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApproverDisplayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApproveDate" Type="datetime" />
+          <Property Name="ApproverResult" Type="nvarchar" MaxLength="500" />
+          <Property Name="Remark1" Type="nvarchar" MaxLength="500" />
+          <Property Name="Remark2" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“EtronWF.dbo.WF_Task”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="WF_Task">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TypeID" />
+            <PropertyRef Name="FormUrl" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ParentID" Type="uniqueidentifier" />
+          <Property Name="TypeID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FormUrl" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="FormCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="ApprovalType" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreaterAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreaterDisplayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="State" Type="nvarchar" MaxLength="500" />
+          <Property Name="NextInquisitorAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="NextInquisitorDisplayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProcessTime" Type="datetime" />
+          <Property Name="LastInquisitorAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastInquisitorDisplayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastProcessTime" Type="datetime" />
+          <Property Name="LastState" Type="nvarchar" MaxLength="500" />
+          <Property Name="Remark1" Type="nvarchar" MaxLength="500" />
+          <Property Name="Remark2" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“EtronWF.dbo.WF_Type”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="WF_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TypeName" />
+            <PropertyRef Name="LockFlag" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TypeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="LockFlag" Type="bit" Nullable="false" />
+          <Property Name="Remark1" Type="nvarchar" MaxLength="100" />
+          <Property Name="Remark2" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EtronWFModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="EtronWFEntities">
+          <EntitySet Name="WF_Delegate" EntityType="EtronWFModel.WF_Delegate" />
+          <EntitySet Name="WF_Record" EntityType="EtronWFModel.WF_Record" />
+          <EntitySet Name="WF_Task" EntityType="EtronWFModel.WF_Task" />
+          <EntitySet Name="WF_Type" EntityType="EtronWFModel.WF_Type" />
+        </EntityContainer>
+        <EntityType Name="WF_Delegate">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TypeID" />
+            <PropertyRef Name="UserAccount" />
+            <PropertyRef Name="DelegateUserAccount" />
+            <PropertyRef Name="BeginTime" />
+            <PropertyRef Name="EndTime" />
+            <PropertyRef Name="Enable" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="TypeID" Type="Guid" Nullable="false" />
+          <Property Name="UserAccount" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DelegateUserAccount" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BeginTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Enable" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WF_Record">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="TaskID" Type="Guid" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ApproverAccount" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ApproverDisplayName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ApproveDate" Type="DateTime" Precision="3" />
+          <Property Name="ApproverResult" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Remark1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Remark2" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="WF_Task">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TypeID" />
+            <PropertyRef Name="FormUrl" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="ParentID" Type="Guid" />
+          <Property Name="TypeID" Type="Guid" Nullable="false" />
+          <Property Name="FormUrl" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="FormCode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ApprovalType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreaterAccount" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreaterDisplayName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="State" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="NextInquisitorAccount" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NextInquisitorDisplayName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProcessTime" Type="DateTime" Precision="3" />
+          <Property Name="LastInquisitorAccount" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastInquisitorDisplayName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastProcessTime" Type="DateTime" Precision="3" />
+          <Property Name="LastState" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Remark1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Remark2" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="WF_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="TypeName" />
+            <PropertyRef Name="LockFlag" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="TypeName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="LockFlag" Type="Boolean" Nullable="false" />
+          <Property Name="Remark1" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Remark2" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="EtronWFModelStoreContainer" CdmEntityContainer="EtronWFEntities">
+          <EntitySetMapping Name="WF_Delegate">
+            <EntityTypeMapping TypeName="EtronWFModel.WF_Delegate">
+              <MappingFragment StoreEntitySet="WF_Delegate">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
+                <ScalarProperty Name="DelegateUserAccount" ColumnName="DelegateUserAccount" />
+                <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WF_Record">
+            <EntityTypeMapping TypeName="EtronWFModel.WF_Record">
+              <MappingFragment StoreEntitySet="WF_Record">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ApproverAccount" ColumnName="ApproverAccount" />
+                <ScalarProperty Name="ApproverDisplayName" ColumnName="ApproverDisplayName" />
+                <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+                <ScalarProperty Name="ApproverResult" ColumnName="ApproverResult" />
+                <ScalarProperty Name="Remark1" ColumnName="Remark1" />
+                <ScalarProperty Name="Remark2" ColumnName="Remark2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WF_Task">
+            <EntityTypeMapping TypeName="EtronWFModel.WF_Task">
+              <MappingFragment StoreEntitySet="WF_Task">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="FormUrl" ColumnName="FormUrl" />
+                <ScalarProperty Name="FormCode" ColumnName="FormCode" />
+                <ScalarProperty Name="ApprovalType" ColumnName="ApprovalType" />
+                <ScalarProperty Name="CreaterAccount" ColumnName="CreaterAccount" />
+                <ScalarProperty Name="CreaterDisplayName" ColumnName="CreaterDisplayName" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="NextInquisitorAccount" ColumnName="NextInquisitorAccount" />
+                <ScalarProperty Name="NextInquisitorDisplayName" ColumnName="NextInquisitorDisplayName" />
+                <ScalarProperty Name="ProcessTime" ColumnName="ProcessTime" />
+                <ScalarProperty Name="LastInquisitorAccount" ColumnName="LastInquisitorAccount" />
+                <ScalarProperty Name="LastInquisitorDisplayName" ColumnName="LastInquisitorDisplayName" />
+                <ScalarProperty Name="LastProcessTime" ColumnName="LastProcessTime" />
+                <ScalarProperty Name="LastState" ColumnName="LastState" />
+                <ScalarProperty Name="Remark1" ColumnName="Remark1" />
+                <ScalarProperty Name="Remark2" ColumnName="Remark2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WF_Type">
+            <EntityTypeMapping TypeName="EtronWFModel.WF_Type">
+              <MappingFragment StoreEntitySet="WF_Type">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LockFlag" ColumnName="LockFlag" />
+                <ScalarProperty Name="Remark1" ColumnName="Remark1" />
+                <ScalarProperty Name="Remark2" ColumnName="Remark2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

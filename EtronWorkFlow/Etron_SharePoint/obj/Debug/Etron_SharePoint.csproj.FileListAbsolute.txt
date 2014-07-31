@@ -1,0 +1,6 @@
+E:\SuzhouEtron\EtronWorkFlow\Etron_SharePoint\bin\Debug\Etron_SharePoint.dll.config
+E:\SuzhouEtron\EtronWorkFlow\Etron_SharePoint\bin\Debug\Etron_SharePoint.dll
+E:\SuzhouEtron\EtronWorkFlow\Etron_SharePoint\bin\Debug\Etron_SharePoint.pdb
+E:\SuzhouEtron\EtronWorkFlow\Etron_SharePoint\obj\Debug\Etron_SharePoint.csprojResolveAssemblyReference.cache
+E:\SuzhouEtron\EtronWorkFlow\Etron_SharePoint\obj\Debug\Etron_SharePoint.dll
+E:\SuzhouEtron\EtronWorkFlow\Etron_SharePoint\obj\Debug\Etron_SharePoint.pdb

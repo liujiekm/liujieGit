@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="21436620-2dd5-4e23-b51a-e4f1e1b20dba" solutionId="21436620-2dd5-4e23-b51a-e4f1e1b20dba" resetWebServer="false" name="Etron_SharePoint" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Etron_BLL.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Etron_BLL\bin\Debug\Etron_BLL.dll">
+      <safeControls>
+        <safeControl assemblyName="Etron_BLL" namespaceName="Etron_BLL" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Etron_DAL.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Etron_DAL\bin\Debug\Etron_DAL.dll">
+      <safeControls>
+        <safeControl assemblyName="Etron_DAL" namespaceName="Etron_DAL" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Etron_Model.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Etron_Model\bin\Debug\Etron_Model.dll">
+      <safeControls>
+        <safeControl assemblyName="Etron_Model" namespaceName="Etron_Model" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Etron_Utility.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Etron_Utility\bin\Debug\Etron_Utility.dll">
+      <safeControls>
+        <safeControl assemblyName="Etron_Utility" namespaceName="Etron_Utility" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+  </assemblies>
+  <features>
+    <featureReference itemId="6060e4b3-c3c5-4966-a21e-edb849408b93" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="25fa84f1-bb54-491a-bfbb-095d251f3a15" />
+    <projectItemReference itemId="705955fe-9856-4d5a-b84b-d30f7d39df1b" />
+    <projectItemReference itemId="299b0e83-8fd7-426d-b91d-35f5144c2d27" />
+  </projectItems>
+</package>

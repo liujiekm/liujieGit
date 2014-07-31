@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d08fc52d89e54ed7bea4db8ebeea7ddd" Name="关系图1">
+        <EntityTypeShape EntityType="EtronWFModel.WF_Delegate" Width="1.875" PointX="0.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtronWFModel.WF_Record" Width="1.875" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtronWFModel.WF_Task" Width="2.5" PointX="4.875" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EtronWFModel.WF_Type" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

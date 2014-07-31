@@ -1,0 +1,15 @@
+﻿<% @ ServiceHost Language="C#" 
+ Debug="true"
+Factory="Microsoft.SharePoint.Client.Services.MultipleBaseAddressWebServiceHostFactory, Microsoft.SharePoint.Client.ServerRuntime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" 
+Service="Etron_SharePoint.ISAPI.UserBirthdayService.UserBirthday, Etron_SharePoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=94fea3e72648fba3"%>
+
+
+
+
+
+
+
+
+
+
+

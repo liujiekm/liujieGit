@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EtronHRModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="EtronHREntities">
+    <EntitySet Name="hr001" EntityType="EtronHRModel.hr001" />
+    <EntitySet Name="hr003" EntityType="EtronHRModel.hr003" />
+    <EntitySet Name="hr005" EntityType="EtronHRModel.hr005" />
+    <EntitySet Name="hr005a" EntityType="EtronHRModel.hr005a" />
+    <EntitySet Name="hr006" EntityType="EtronHRModel.hr006" />
+  </EntityContainer>
+  <EntityType Name="hr001">
+    <Key>
+      <PropertyRef Name="rowid" />
+      <PropertyRef Name="tsn" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="enName" />
+      <PropertyRef Name="nameKind" />
+      <PropertyRef Name="jobCode" />
+      <PropertyRef Name="srt" />
+      <PropertyRef Name="enab" />
+      <PropertyRef Name="crtDay" />
+      <PropertyRef Name="crtHrnum" />
+      <PropertyRef Name="crtName" />
+      <PropertyRef Name="crtIp" />
+      <PropertyRef Name="updDay" />
+      <PropertyRef Name="updHrnum" />
+      <PropertyRef Name="updName" />
+      <PropertyRef Name="updIp" />
+      <PropertyRef Name="objective" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="instruction" />
+      <PropertyRef Name="tool" />
+    </Key>
+    <Property Name="rowid" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="tsn" Nullable="false" Type="Int32" />
+    <Property Name="name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="enName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="nameKind" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="jobCode" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="srt" Nullable="false" Type="Int32" />
+    <Property Name="enab" Nullable="false" Type="Int32" />
+    <Property Name="crtDay" Nullable="false" Precision="3" Type="DateTime" />
+    <Property Name="crtHrnum" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="crtName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="crtIp" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="updDay" Nullable="false" Precision="3" Type="DateTime" />
+    <Property Name="updHrnum" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="updName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="updIp" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="objective" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="instruction" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="tool" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" Type="String" />
+  </EntityType>
+  <EntityType Name="hr003">
+    <Key>
+      <PropertyRef Name="rowid" />
+      <PropertyRef Name="tsn" />
+      <PropertyRef Name="Hr003aTsn" />
+      <PropertyRef Name="chName" />
+      <PropertyRef Name="enName" />
+      <PropertyRef Name="chFullName" />
+      <PropertyRef Name="enFullName" />
+      <PropertyRef Name="treeLevel" />
+      <PropertyRef Name="enab" />
+      <PropertyRef Name="srt" />
+      <PropertyRef Name="crtDay" />
+      <PropertyRef Name="crtHrnum" />
+      <PropertyRef Name="crtName" />
+      <PropertyRef Name="crtIp" />
+      <PropertyRef Name="updDay" />
+      <PropertyRef Name="updHrnum" />
+      <PropertyRef Name="updName" />
+      <PropertyRef Name="updIp" />
+    </Key>
+    <Property Name="rowid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tsn" Type="Int32" Nullable="false" />
+    <Property Name="Hr003aTsn" Type="Int32" Nullable="false" />
+    <Property Name="chName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="enName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="chFullName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="enFullName" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="lastTsn" Type="Int32" />
+    <Property Name="treeLevel" Type="Int32" Nullable="false" />
+    <Property Name="enab" Type="Int32" Nullable="false" />
+    <Property Name="srt" Type="Int32" Nullable="false" />
+    <Property Name="crtDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="crtHrnum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="crtName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="crtIp" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="updDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updHrnum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="updName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="updIp" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="hr005">
+    <Key>
+      <PropertyRef Name="rowid" />
+      <PropertyRef Name="tsn" />
+      <PropertyRef Name="staffId" />
+      <PropertyRef Name="pwd" />
+      <PropertyRef Name="hrNum" />
+      <PropertyRef Name="chName" />
+      <PropertyRef Name="enName" />
+      <PropertyRef Name="sex" />
+      <PropertyRef Name="idNumber" />
+      <PropertyRef Name="birthday" />
+      <PropertyRef Name="registerAddress" />
+      <PropertyRef Name="hr007CodeId" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="ext" />
+      <PropertyRef Name="idCard" />
+      <PropertyRef Name="photo" />
+      <PropertyRef Name="telephone1" />
+      <PropertyRef Name="telephone2" />
+      <PropertyRef Name="mobilephone1" />
+      <PropertyRef Name="mobilephone2" />
+      <PropertyRef Name="mobilephone3" />
+      <PropertyRef Name="address1" />
+      <PropertyRef Name="address2" />
+      <PropertyRef Name="address3" />
+      <PropertyRef Name="hr008Tsn" />
+      <PropertyRef Name="hr002Tsn" />
+      <PropertyRef Name="jobClass" />
+      <PropertyRef Name="startDay" />
+      <PropertyRef Name="leaveDay" />
+      <PropertyRef Name="chStore" />
+      <PropertyRef Name="enStore" />
+      <PropertyRef Name="interview" />
+      <PropertyRef Name="workPlace" />
+      <PropertyRef Name="jobCode" />
+      <PropertyRef Name="hr012Tsn" />
+      <PropertyRef Name="levStatus" />
+      <PropertyRef Name="hr005gTsn" />
+      <PropertyRef Name="jobrem" />
+      <PropertyRef Name="jobsource" />
+      <PropertyRef Name="crtDay" />
+      <PropertyRef Name="crtHrnum" />
+      <PropertyRef Name="crtName" />
+      <PropertyRef Name="crtIp" />
+      <PropertyRef Name="updDay" />
+      <PropertyRef Name="updHrnum" />
+      <PropertyRef Name="updName" />
+      <PropertyRef Name="updIp" />
+    </Key>
+    <Property Name="rowid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tsn" Type="Int32" Nullable="false" />
+    <Property Name="staffId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="pwd" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="hrNum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="chName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="enName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sex" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="idNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="birthday" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="registerAddress" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="hr007CodeId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ext" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="idCard" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="photo" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="telephone1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="telephone2" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mobilephone1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mobilephone2" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mobilephone3" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="address1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="address2" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="address3" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="hr008Tsn" Type="Int32" Nullable="false" />
+    <Property Name="hr002Tsn" Type="Int32" Nullable="false" />
+    <Property Name="jobClass" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="startDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="leaveDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="chStore" Type="String" Nullable="false" MaxLength="8000" Unicode="false" FixedLength="false" />
+    <Property Name="enStore" Type="String" Nullable="false" MaxLength="8000" Unicode="false" FixedLength="false" />
+    <Property Name="interview" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="workPlace" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="jobCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="hr012Tsn" Type="Int32" Nullable="false" />
+    <Property Name="levStatus" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="hr005gTsn" Type="Int32" Nullable="false" />
+    <Property Name="jobrem" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="jobsource" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="crtDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="crtHrnum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="crtName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="crtIp" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="updDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updHrnum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="updName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="updIp" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="hr005a">
+    <Key>
+      <PropertyRef Name="rowid" />
+    </Key>
+    <Property Name="rowid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tsn" Type="Int32" Nullable="false" />
+    <Property Name="hr005tsn" Type="Int32" Nullable="false" />
+    <Property Name="hr001Tsn" Type="Int32" Nullable="false" />
+    <Property Name="enab" Type="Int32" Nullable="false" />
+    <Property Name="crtDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="crtHrnum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="crtName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="crtIp" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="updDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updHrnum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="updName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="updIp" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="hr006">
+    <Key>
+      <PropertyRef Name="rowid" />
+    </Key>
+    <Property Name="rowid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tsn" Type="Int32" Nullable="false" />
+    <Property Name="hr003Tsn" Type="Int32" Nullable="false" />
+    <Property Name="hr005Tsn" Type="Int32" Nullable="false" />
+    <Property Name="depStartDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="depEndDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="defau" Type="Int32" Nullable="false" />
+    <Property Name="hr003aTsn" Type="Int32" Nullable="false" />
+    <Property Name="enab" Type="Int32" Nullable="false" />
+    <Property Name="stopReason" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="crtDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="crtHrnum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="crtName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="crtIp" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="updDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updHrnum" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="updName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="updIp" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

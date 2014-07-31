@@ -1,0 +1,5 @@
+E:\SuzhouEtron\EtronWorkFlow\Etron_DAL\bin\Debug\Etron_DAL.dll.config
+E:\SuzhouEtron\EtronWorkFlow\Etron_DAL\bin\Debug\Etron_DAL.dll
+E:\SuzhouEtron\EtronWorkFlow\Etron_DAL\bin\Debug\Etron_DAL.pdb
+E:\SuzhouEtron\EtronWorkFlow\Etron_DAL\obj\Debug\Etron_DAL.dll
+E:\SuzhouEtron\EtronWorkFlow\Etron_DAL\obj\Debug\Etron_DAL.pdb

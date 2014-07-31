@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="EtronHRModelStoreContainer" CdmEntityContainer="EtronHREntities">
+    <EntitySetMapping Name="hr001">
+      <EntityTypeMapping TypeName="EtronHRModel.hr001">
+        <MappingFragment StoreEntitySet="hr001">
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="tsn" ColumnName="tsn" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="enName" ColumnName="enName" />
+          <ScalarProperty Name="nameKind" ColumnName="nameKind" />
+          <ScalarProperty Name="jobCode" ColumnName="jobCode" />
+          <ScalarProperty Name="srt" ColumnName="srt" />
+          <ScalarProperty Name="enab" ColumnName="enab" />
+          <ScalarProperty Name="crtDay" ColumnName="crtDay" />
+          <ScalarProperty Name="crtHrnum" ColumnName="crtHrnum" />
+          <ScalarProperty Name="crtName" ColumnName="crtName" />
+          <ScalarProperty Name="crtIp" ColumnName="crtIp" />
+          <ScalarProperty Name="updDay" ColumnName="updDay" />
+          <ScalarProperty Name="updHrnum" ColumnName="updHrnum" />
+          <ScalarProperty Name="updName" ColumnName="updName" />
+          <ScalarProperty Name="updIp" ColumnName="updIp" />
+          <ScalarProperty Name="objective" ColumnName="objective" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="instruction" ColumnName="instruction" />
+          <ScalarProperty Name="tool" ColumnName="tool" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hr003">
+      <EntityTypeMapping TypeName="EtronHRModel.hr003">
+        <MappingFragment StoreEntitySet="hr003">
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="tsn" ColumnName="tsn" />
+          <ScalarProperty Name="Hr003aTsn" ColumnName="Hr003aTsn" />
+          <ScalarProperty Name="chName" ColumnName="chName" />
+          <ScalarProperty Name="enName" ColumnName="enName" />
+          <ScalarProperty Name="chFullName" ColumnName="chFullName" />
+          <ScalarProperty Name="enFullName" ColumnName="enFullName" />
+          <ScalarProperty Name="lastTsn" ColumnName="lastTsn" />
+          <ScalarProperty Name="treeLevel" ColumnName="treeLevel" />
+          <ScalarProperty Name="enab" ColumnName="enab" />
+          <ScalarProperty Name="srt" ColumnName="srt" />
+          <ScalarProperty Name="crtDay" ColumnName="crtDay" />
+          <ScalarProperty Name="crtHrnum" ColumnName="crtHrnum" />
+          <ScalarProperty Name="crtName" ColumnName="crtName" />
+          <ScalarProperty Name="crtIp" ColumnName="crtIp" />
+          <ScalarProperty Name="updDay" ColumnName="updDay" />
+          <ScalarProperty Name="updHrnum" ColumnName="updHrnum" />
+          <ScalarProperty Name="updName" ColumnName="updName" />
+          <ScalarProperty Name="updIp" ColumnName="updIp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hr005">
+      <EntityTypeMapping TypeName="EtronHRModel.hr005">
+        <MappingFragment StoreEntitySet="hr005">
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="tsn" ColumnName="tsn" />
+          <ScalarProperty Name="staffId" ColumnName="staffId" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="hrNum" ColumnName="hrNum" />
+          <ScalarProperty Name="chName" ColumnName="chName" />
+          <ScalarProperty Name="enName" ColumnName="enName" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="idNumber" ColumnName="idNumber" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="registerAddress" ColumnName="registerAddress" />
+          <ScalarProperty Name="hr007CodeId" ColumnName="hr007CodeId" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="ext" ColumnName="ext" />
+          <ScalarProperty Name="idCard" ColumnName="idCard" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="telephone1" ColumnName="telephone1" />
+          <ScalarProperty Name="telephone2" ColumnName="telephone2" />
+          <ScalarProperty Name="mobilephone1" ColumnName="mobilephone1" />
+          <ScalarProperty Name="mobilephone2" ColumnName="mobilephone2" />
+          <ScalarProperty Name="mobilephone3" ColumnName="mobilephone3" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="address3" ColumnName="address3" />
+          <ScalarProperty Name="hr008Tsn" ColumnName="hr008Tsn" />
+          <ScalarProperty Name="hr002Tsn" ColumnName="hr002Tsn" />
+          <ScalarProperty Name="jobClass" ColumnName="jobClass" />
+          <ScalarProperty Name="startDay" ColumnName="startDay" />
+          <ScalarProperty Name="leaveDay" ColumnName="leaveDay" />
+          <ScalarProperty Name="chStore" ColumnName="chStore" />
+          <ScalarProperty Name="enStore" ColumnName="enStore" />
+          <ScalarProperty Name="interview" ColumnName="interview" />
+          <ScalarProperty Name="workPlace" ColumnName="workPlace" />
+          <ScalarProperty Name="jobCode" ColumnName="jobCode" />
+          <ScalarProperty Name="hr012Tsn" ColumnName="hr012Tsn" />
+          <ScalarProperty Name="levStatus" ColumnName="levStatus" />
+          <ScalarProperty Name="hr005gTsn" ColumnName="hr005gTsn" />
+          <ScalarProperty Name="jobrem" ColumnName="jobrem" />
+          <ScalarProperty Name="jobsource" ColumnName="jobsource" />
+          <ScalarProperty Name="crtDay" ColumnName="crtDay" />
+          <ScalarProperty Name="crtHrnum" ColumnName="crtHrnum" />
+          <ScalarProperty Name="crtName" ColumnName="crtName" />
+          <ScalarProperty Name="crtIp" ColumnName="crtIp" />
+          <ScalarProperty Name="updDay" ColumnName="updDay" />
+          <ScalarProperty Name="updHrnum" ColumnName="updHrnum" />
+          <ScalarProperty Name="updName" ColumnName="updName" />
+          <ScalarProperty Name="updIp" ColumnName="updIp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hr005a">
+      <EntityTypeMapping TypeName="EtronHRModel.hr005a">
+        <MappingFragment StoreEntitySet="hr005a">
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="tsn" ColumnName="tsn" />
+          <ScalarProperty Name="hr005tsn" ColumnName="hr005tsn" />
+          <ScalarProperty Name="hr001Tsn" ColumnName="hr001Tsn" />
+          <ScalarProperty Name="enab" ColumnName="enab" />
+          <ScalarProperty Name="crtDay" ColumnName="crtDay" />
+          <ScalarProperty Name="crtHrnum" ColumnName="crtHrnum" />
+          <ScalarProperty Name="crtName" ColumnName="crtName" />
+          <ScalarProperty Name="crtIp" ColumnName="crtIp" />
+          <ScalarProperty Name="updDay" ColumnName="updDay" />
+          <ScalarProperty Name="updHrnum" ColumnName="updHrnum" />
+          <ScalarProperty Name="updName" ColumnName="updName" />
+          <ScalarProperty Name="updIp" ColumnName="updIp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hr006">
+      <EntityTypeMapping TypeName="EtronHRModel.hr006">
+        <MappingFragment StoreEntitySet="hr006">
+          <ScalarProperty Name="rowid" ColumnName="rowid" />
+          <ScalarProperty Name="tsn" ColumnName="tsn" />
+          <ScalarProperty Name="hr003Tsn" ColumnName="hr003Tsn" />
+          <ScalarProperty Name="hr005Tsn" ColumnName="hr005Tsn" />
+          <ScalarProperty Name="depStartDay" ColumnName="depStartDay" />
+          <ScalarProperty Name="depEndDay" ColumnName="depEndDay" />
+          <ScalarProperty Name="defau" ColumnName="defau" />
+          <ScalarProperty Name="hr003aTsn" ColumnName="hr003aTsn" />
+          <ScalarProperty Name="enab" ColumnName="enab" />
+          <ScalarProperty Name="stopReason" ColumnName="stopReason" />
+          <ScalarProperty Name="crtDay" ColumnName="crtDay" />
+          <ScalarProperty Name="crtHrnum" ColumnName="crtHrnum" />
+          <ScalarProperty Name="crtName" ColumnName="crtName" />
+          <ScalarProperty Name="crtIp" ColumnName="crtIp" />
+          <ScalarProperty Name="updDay" ColumnName="updDay" />
+          <ScalarProperty Name="updHrnum" ColumnName="updHrnum" />
+          <ScalarProperty Name="updName" ColumnName="updName" />
+          <ScalarProperty Name="updIp" ColumnName="updIp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
